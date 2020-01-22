@@ -21,7 +21,7 @@ create table Ofertas(
 	titulo varchar(45) not null,
 	descripcion varchar(45) not null,
 	fecha_posteo datetime not null,
-	estado varchar(10) not null,
+	activo bit not null,
 	id_categoria_ofertas int not null,
 	ubicacion varchar(45) not null,
 	posicion varchar(45) not null,
