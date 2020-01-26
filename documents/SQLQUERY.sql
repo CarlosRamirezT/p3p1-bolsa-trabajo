@@ -30,7 +30,7 @@ create table Ofertas(
 go
 	alter table Ofertas add constraint fk_id_categoria_ofertas foreign key (id_categoria_ofertas) references categoriaOfertaEmpleos (id_categoria_ofertas)
 go
-	alter table Ofertas add constraint ck_estado check (estado in ('activa', 'inactiva'))
+	alter table Ofertas add constraint ck_activo check (activo in (0, 1))
 go
 create table Configuraciones(
 	id_configuraciones int identity(1,1) not null primary key,
