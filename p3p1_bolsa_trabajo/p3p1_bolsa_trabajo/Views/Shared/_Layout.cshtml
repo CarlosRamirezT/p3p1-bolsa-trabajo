@@ -19,12 +19,19 @@
                 </button>
                 @Html.ActionLink("Empleosya RD", "Index", "Ofertas_Categorias_", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+            <div class="dropdown" style="text-align-last: right; margin-top: 10px;">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" style="left: 790px;">
+                    <li>@Html.ActionLink("Log In", "Index", "Ofertas_Categorias_")</li>
+                    <li>@Html.ActionLink("Sign Up", "Index", "Ofertas_Categorias_")</li>
                 </ul>
             </div>
         </div>
     </div>
+
+
 
     <div class="container body-content">
         @RenderBody()
