@@ -16,7 +16,7 @@ namespace p3p1_bolsa_trabajo
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Ofertas_Categorias_", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

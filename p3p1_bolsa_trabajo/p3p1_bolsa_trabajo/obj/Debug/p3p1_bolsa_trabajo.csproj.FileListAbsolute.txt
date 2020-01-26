@@ -14,8 +14,12 @@ C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion I
 C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\bin\System.Web.Webpages.Razor.xml
 C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\bin\System.Web.Helpers.xml
 C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\bin\System.Web.Mvc.xml
-C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\obj\Debug\p3p1_bolsa_trabajo.csprojAssemblyReference.cache
 C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\obj\Debug\p3p1_bolsa_trabajo.csproj.CoreCompileInputs.cache
 C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\obj\Debug\p3p1_bolsa_trabajo.csproj.CopyComplete
 C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\obj\Debug\p3p1_bolsa_trabajo.dll
 C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\obj\Debug\p3p1_bolsa_trabajo.pdb
+C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\bin\EntityFramework.dll
+C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\bin\EntityFramework.SqlServer.dll
+C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\bin\EntityFramework.xml
+C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\bin\EntityFramework.SqlServer.xml
+C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\obj\Debug\p3p1_bolsa_trabajo.csprojAssemblyReference.cache

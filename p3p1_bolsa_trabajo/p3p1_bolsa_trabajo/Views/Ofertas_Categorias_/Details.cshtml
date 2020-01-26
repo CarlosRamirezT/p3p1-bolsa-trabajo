@@ -1,0 +1,83 @@
+﻿@model p3p1_bolsa_trabajo.Models.Oferta
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Oferta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_posteo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_posteo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ubicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ubicacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.posicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.posicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_empresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_empresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoriaOfertaEmpleo.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoriaOfertaEmpleo.titulo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_ofertas }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
