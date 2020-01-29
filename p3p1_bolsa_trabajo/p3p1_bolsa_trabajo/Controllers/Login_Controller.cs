@@ -10,7 +10,7 @@ namespace p3p1_bolsa_trabajo.Controllers
     public class Login_Controller : Controller
     {
         // GET: Login_
-        public ActionResult Login()
+        public ActionResult Loginn()
         {
             return View();
         }
@@ -23,7 +23,7 @@ namespace p3p1_bolsa_trabajo.Controllers
                 if(userDetails == null)
                 {
                     UserModel.LoginErrorMessage = "email o password invalida.";
-                    return View("Login", UserModel);
+                    return View("Loginn", UserModel);
                 }
                 else
                 {
