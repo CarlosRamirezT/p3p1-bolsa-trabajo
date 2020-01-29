@@ -98,6 +98,16 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Models\dbModelUsers.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbModelUsers.edmx</DependentUpon>
+      <LastGenOutput>dbModelUsers.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\dbModelUsers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbModelUsers.edmx</DependentUpon>
+      <LastGenOutput>dbModelUsers.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Model_Ofertas_Categoria.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model_Ofertas_Categoria.edmx</DependentUpon>
@@ -117,20 +127,49 @@
     <Content Include="Models\Model_Ofertas_Categoria.edmx.diagram">
       <DependentUpon>Model_Ofertas_Categoria.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\dbModelUsers.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbModelUsers.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\dbModelUsers.edmx.diagram">
+      <DependentUpon>dbModelUsers.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Login_Controller.cs" />
     <Compile Include="Controllers\Ofertas_Categorias_Controller.cs" />
+    <Compile Include="Controllers\User_Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\categoriaOfertaEmpleo.cs">
       <DependentUpon>Model_Ofertas_Categoria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbModelUsers.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbModelUsers.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbModelUsers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbModelUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbModelUsers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbModelUsers.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Model_Ofertas_Categoria.Context.cs">
       <AutoGen>True</AutoGen>
@@ -150,6 +189,9 @@
     <Compile Include="Models\Oferta.cs">
       <DependentUpon>Model_Ofertas_Categoria.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <DependentUpon>dbModelUsers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +209,8 @@
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\Shared\_Layout_Administrador.cshtml" />
+    <Content Include="Views\User_\AddOrEdit.cshtml" />
+    <Content Include="Views\Login_\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
