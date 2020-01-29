@@ -14,7 +14,8 @@ namespace p3p1_bolsa_trabajo.Controllers
         {
             return View();
         }
-        [HttpPost]
+
+        [HttpPost] 
         public ActionResult Autherize(p3p1_bolsa_trabajo.Models.Usuario UserModel)
         {
             using (Model_Usuarios db = new Model_Usuarios())
@@ -31,7 +32,6 @@ namespace p3p1_bolsa_trabajo.Controllers
                     return RedirectToAction("Index", "Ofertas_Categorias_");
                 }
             }
-            return View();
         }
     }
 }
