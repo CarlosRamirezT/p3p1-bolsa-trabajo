@@ -11,33 +11,17 @@ namespace p3p1_bolsa_trabajo.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Oferta
     {
         public int id_ofertas { get; set; }
-        [DisplayName("Titulo")]
-        [Required(ErrorMessage = "Este campo es requerido")]
         public string titulo { get; set; }
-        [DisplayName("Descripción")]
-        [Required(ErrorMessage = "Este campo es requerido")]
         public string descripcion { get; set; }
-        [DisplayName("Fecha")]
         public System.DateTime fecha_posteo { get; set; }
-        [Required(ErrorMessage = "Este campo es requerido")]
         public bool activo { get; set; }
-        [DisplayName("Categoria")]
-        [Required(ErrorMessage = "Este campo es requerido")]
         public int id_categoria_ofertas { get; set; }
-        [DisplayName("Ubicación")]
-        [Required(ErrorMessage = "Este campo es requerido")]
         public string ubicacion { get; set; }
-        [DisplayName("Posición")]
-        [Required(ErrorMessage = "Este campo es requerido")]
         public string posicion { get; set; }
-        [DisplayName("Empresa")]
-        [Required(ErrorMessage = "Este campo es requerido")]
         public string nombre_empresa { get; set; }
     
         public virtual categoriaOfertaEmpleo categoriaOfertaEmpleo { get; set; }

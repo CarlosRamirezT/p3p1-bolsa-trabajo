@@ -11,25 +11,12 @@ namespace p3p1_bolsa_trabajo.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Usuario
     {
         public int id_usuarios { get; set; }
-        [Required(ErrorMessage = "Este campo es requerido")]
         public string email { get; set; }
-        [Required(ErrorMessage = "Este campo es requerido")]
-        [DataType(DataType.Password)]
-        [DisplayName("Password")]
         public string password_usuario { get; set; }
-        [DataType(DataType.Password)]
-        [DisplayName("Confirmar Password")]
-        [Compare("password_usuario")]
-        public string confirm_password { get; set; }
-        [Required(ErrorMessage = "Este campo es requerido")]
         public string rol { get; set; }
-
-        public string LoginErrorMessage { get; set; }
     }
 }

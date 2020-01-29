@@ -11,7 +11,6 @@ namespace p3p1_bolsa_trabajo.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     
     public partial class categoriaOfertaEmpleo
     {
@@ -22,7 +21,6 @@ namespace p3p1_bolsa_trabajo.Models
         }
     
         public int id_categoria_ofertas { get; set; }
-        [DisplayName("Categoria")]
         public string titulo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
