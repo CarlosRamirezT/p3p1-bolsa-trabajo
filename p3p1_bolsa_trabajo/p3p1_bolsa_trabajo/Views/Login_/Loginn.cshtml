@@ -21,11 +21,10 @@
             <hr />
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <h4 style="text-decoration:underline">LOGIN</h4>
-                    <table>
-                        <tr>
-                            <td></td>
-                        </tr>
+                    <div class="alert alert-success">
+                        <h3 style="text-decoration:underline">LOGIN</h3>
+                    </div>
+                    <table class="table table-bordered table-hover table-responsive">
                         <tr>
                             <td>
                                 @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -35,7 +34,6 @@
                             </td>
                         </tr>
                         <tr>
-                            <td></td>
                             <td>@Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })</td>
                         </tr>
                         <tr>
@@ -43,21 +41,14 @@
                             <td>@Html.EditorFor(model => model.password_usuario, new { htmlAttributes = new { @class = "form-control" } })</td>
                         </tr>
                         <tr>
-                            <td></td>
                             <td>@Html.ValidationMessageFor(model => model.password_usuario, "", new { @class = "text-danger" })</td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <label class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage)</label>
+                                <input type="submit" name="name" class="btn btn-success" value="Logear" />
+                                <label class="label-success">@ViewBag.DuplicateMessage</label>
                             </td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <input type="submit" name="name" class="btn btn-default" value="Logear" />
-                            </td>
-                        </tr>
-
 
                     </table>
                 </div>

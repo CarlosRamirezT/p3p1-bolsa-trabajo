@@ -22,7 +22,7 @@ namespace p3p1_bolsa_trabajo.Controllers
                 var userDetails = db.Usuarios.Where(x => x.email == UserModel.email && x.password_usuario == UserModel.password_usuario).FirstOrDefault();
                 if(userDetails == null)
                 {
-                    UserModel.LoginErrorMessage = "email o password invalida.";
+                    ViewBag.DuplicateMessage = "Email o contraseña invalida.";
                     return View("Loginn", UserModel);
                 }
                 else

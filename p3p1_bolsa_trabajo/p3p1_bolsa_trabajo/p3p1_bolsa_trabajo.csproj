@@ -206,7 +206,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_Layout_Administrador.cshtml" />
     <Content Include="Views\User_\AddOrEdit.cshtml" />
-    <Content Include="Views\Login_\Login.cshtml" />
     <Content Include="Views\AddOfertass\Aofertas.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -217,6 +216,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Login_\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -17,19 +17,18 @@ namespace p3p1_bolsa_trabajo.Models
     public partial class Usuario
     {
         public int id_usuarios { get; set; }
-        [Required(ErrorMessage = "Este campo es requerido")]
+        [Required(ErrorMessage = "Este campo es necesario")]
+        [DisplayName("Email")]
         public string email { get; set; }
-        [Required(ErrorMessage = "Este campo es requerido")]
+        [Required(ErrorMessage = "Este campo es necesario")]
+        [DisplayName("Contraseña")]
         [DataType(DataType.Password)]
-        [DisplayName("Password")]
         public string password_usuario { get; set; }
         [DataType(DataType.Password)]
-        [DisplayName("Confirmar Password")]
+        [DisplayName("Confirmar Contraseña")]
         [Compare("password_usuario")]
         public string confirm_password { get; set; }
-        [Required(ErrorMessage = "Este campo es requerido")]
+        [Required(ErrorMessage = "Este campo es necesario")]
         public string rol { get; set; }
-
-        public string LoginErrorMessage { get; set; }
     }
 }
