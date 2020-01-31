@@ -1,0 +1,43 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model dynamic
+
+@{
+    ViewBag.Title = "Ofertas Empleo";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<br />
+<div class="jumbotron text-center">
+    <h2>Ofertas de Empleo </h2>
+    <div class="alert alert-success">@Html.ActionLink("Crear Nueva Oferta", "Create")</div>
+</div>
+<br />
+@foreach (var categoria in Model.Categorias)
+{
+    <h3 class="alert alert-info">@categoria.titulo</h3>
+    <table class="table table-bordered table-hover table-responsive">
+        <tr>
+            <th>Ubicación</th>
+            <th>Posición</th>
+            <th>Empresa</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        @foreach (var oferta in Model.Ofertas)
+        {
+            <tr>
+                <td>@oferta.ubicacion</td>
+                <td>@oferta.posicion</td>
+                <td>@oferta.nombre_empresa</td>
+                <td>@Html.ActionLink("Detalles", "DetailsAdmin", new { id = oferta.id_ofertas })</td>
+                <td>@Html.ActionLink("Editar", "Edit", new { id = oferta.id_ofertas })</td>
+                <td>@Html.ActionLink("Eliminar", "Delete", new { id = oferta.id_ofertas })</td>
+            </tr>
+        }
+    </table>
+    @Html.PagedListPager((IPagedList)Model.Ofertas, page => Url.Action("ViewAll", new { page }))
+}
+<br />
+@Html.ActionLink("Volver al inicio", "IndexAdmin")
