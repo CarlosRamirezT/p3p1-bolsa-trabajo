@@ -11,19 +11,45 @@ namespace p3p1_bolsa_trabajo_new.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Oferta
     {
         public int id_ofertas { get; set; }
+
+        [DisplayName("Titulo")]
+        [DataType(DataType.Text)]
         public string titulo { get; set; }
+
+        [DisplayName("Descripción")]
+        [DataType(DataType.MultilineText)]
         public string descripcion { get; set; }
+
+        [DisplayName("Fecha Posteo")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public System.DateTime fecha_posteo { get; set; }
+
+        [DisplayName("Activo?")]
         public bool activo { get; set; }
+
+        [DisplayName("Id Categoria Oferta")]
         public int id_categoria_ofertas { get; set; }
+
+        [DisplayName("Ubicación")]
+        [DataType(DataType.Text)]
         public string ubicacion { get; set; }
+
+        [DisplayName("Posición")]
+        [DataType(DataType.Text)]
         public string posicion { get; set; }
+
+        [DisplayName("Empresa")]
+        [DataType(DataType.Text)]
         public string nombre_empresa { get; set; }
-    
+
+        [DisplayName("Categoria")]
         public virtual categoriaOfertaEmpleo categoriaOfertaEmpleo { get; set; }
     }
 }

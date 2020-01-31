@@ -151,3 +151,4 @@ C:\Users\ii\source\repos\p3p1-bolsa-trabajo\p3p1-bolsa-empleo-new\p3p1_bolsa_tra
 C:\Users\ii\source\repos\p3p1-bolsa-trabajo\p3p1-bolsa-empleo-new\p3p1_bolsa_trabajo_new\obj\Debug\p3p1_bolsa_trabajo_new.csproj.CopyComplete
 C:\Users\ii\source\repos\p3p1-bolsa-trabajo\p3p1-bolsa-empleo-new\p3p1_bolsa_trabajo_new\obj\Debug\p3p1_bolsa_trabajo_new.dll
 C:\Users\ii\source\repos\p3p1-bolsa-trabajo\p3p1-bolsa-empleo-new\p3p1_bolsa_trabajo_new\obj\Debug\p3p1_bolsa_trabajo_new.pdb
+C:\Users\ii\source\repos\p3p1-bolsa-trabajo\p3p1-bolsa-empleo-new\p3p1_bolsa_trabajo_new\obj\Debug\p3p1_bolsa_trabajo_new.csprojAssemblyReference.cache

@@ -89,7 +89,7 @@ namespace p3p1_bolsa_trabajo_new.Controllers
                 IOrderedQueryable<Oferta> ofertas = from o in db.Ofertas where o.id_categoria_ofertas == category_id orderby o.fecha_posteo descending select o;
                 IOrderedQueryable<categoriaOfertaEmpleo> categorias = from c in db.categoriaOfertaEmpleos where c.id_categoria_ofertas == category_id orderby c.id_categoria_ofertas select c;
                 dynamic ofertas_categorias = new ExpandoObject();
-                int rows2display = 2;
+                int rows2display = 20;
                 ofertas_categorias.Ofertas = ofertas.ToPagedList(page ?? 1, rows2display);
                 ofertas_categorias.Categorias = categorias;
                 return View("ViewAll", ofertas_categorias);

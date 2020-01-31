@@ -27,7 +27,7 @@
         </tr>
         @foreach (var oferta in Model.Ofertas)
         {
-            if (oferta.id_categoria_ofertas == categoria.id_categoria_ofertas)
+            if (oferta.id_categoria_ofertas == categoria.id_categoria_ofertas && contador <= 10)
             {
                 <tr>
                     <td>@oferta.ubicacion</td>
