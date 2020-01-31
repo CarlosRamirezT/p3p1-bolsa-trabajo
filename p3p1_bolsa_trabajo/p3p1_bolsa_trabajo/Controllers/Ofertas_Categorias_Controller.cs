@@ -37,6 +37,31 @@ namespace p3p1_bolsa_trabajo.Controllers
             return View(oferta);
         }
 
+        // GET: Ofertas/Create
+        public ActionResult Create()
+        {
+            ViewBag.id_categoria_ofertas = new SelectList(db.categoriaOfertaEmpleos, "id_categoria_ofertas", "titulo");
+            return View();
+        }
+
+        // POST: Ofertas/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "id_ofertas,titulo,descripcion,fecha_posteo,activo,id_categoria_ofertas,ubicacion,posicion,nombre_empresa")] Oferta oferta)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Ofertas.Add(oferta);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.id_categoria_ofertas = new SelectList(db.categoriaOfertaEmpleos, "id_categoria_ofertas", "titulo", oferta.id_categoria_ofertas);
+            return View(oferta);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
