@@ -88,6 +88,53 @@ namespace p3p1_bolsa_trabajo.Controllers
             return View(oferta);
         }
 
+        // GET: Ofertas/Edit/5
+        public ActionResult Edit(int? id)
+        {
+            if (Session["id_usuarios"] != null)
+            {
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Oferta oferta = db.Ofertas.Find(id);
+                if (oferta == null)
+                {
+                    return HttpNotFound();
+                }
+                ViewBag.id_categoria_ofertas = new SelectList(db.categoriaOfertaEmpleos, "id_categoria_ofertas", "titulo", oferta.id_categoria_ofertas);
+                return View(oferta);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Login");
+            }
+        }
+
+        // POST: Ofertas/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "id_ofertas,titulo,descripcion,fecha_posteo,activo,id_categoria_ofertas,ubicacion,posicion,nombre_empresa")] Oferta oferta)
+        {
+            if (Session["id_usuarios"] != null)
+            {
+                if (ModelState.IsValid)
+                {
+                    db.Entry(oferta).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                ViewBag.id_categoria_ofertas = new SelectList(db.categoriaOfertaEmpleos, "id_categoria_ofertas", "titulo", oferta.id_categoria_ofertas);
+                return View(oferta);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Login");
+            }
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
