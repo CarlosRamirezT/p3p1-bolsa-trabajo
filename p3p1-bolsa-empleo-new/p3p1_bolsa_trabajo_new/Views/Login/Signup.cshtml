@@ -70,9 +70,12 @@
 
 
                     <tr>
-                        <td colspan="2">
+                        <td></td>
+                        <td>
+                            @Html.ActionLink("Ya tienes una cuenta?, Logueate", "Login")
                             <input type="submit" value="Crear" class="btn btn-success" />
                             <label class="label-success">@ViewBag.SuccesMessage</label>
+                            <label class="label-success">@ViewBag.ErrorMessage</label>
                             <label class="label-danger">@ViewBag.DuplicateMessage</label>
                         </td>
                     </tr>

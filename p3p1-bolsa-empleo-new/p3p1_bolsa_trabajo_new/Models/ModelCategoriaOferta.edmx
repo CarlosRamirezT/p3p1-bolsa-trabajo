@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="p3p1BolsaTrabajoModelCategoriaOferta.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="p3p1BolsaTrabajoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="categoriaOfertaEmpleos">
           <Key>
             <PropertyRef Name="id_categoria_ofertas" />
@@ -38,7 +38,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="p3p1BolsaTrabajoModelCategoriaOfertaStoreContainer">
+        <EntityContainer Name="p3p1BolsaTrabajoModelStoreContainer">
           <EntitySet Name="categoriaOfertaEmpleos" EntityType="Self.categoriaOfertaEmpleos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ofertas" EntityType="Self.Ofertas" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="fk_id_categoria_ofertas" Association="Self.fk_id_categoria_ofertas">
@@ -50,7 +50,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="p3p1BolsaTrabajoModelCategoriaOferta" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="p3p1BolsaTrabajoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="categoriaOfertaEmpleo">
           <Key>
             <PropertyRef Name="id_categoria_ofertas" />
@@ -86,7 +86,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="p3p1BolsaTrabajoEntitiesCategoriaOferta" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="p3p1BolsaTrabajoEntitiesCategoriaOfertas" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="categoriaOfertaEmpleos" EntityType="Self.categoriaOfertaEmpleo" />
           <EntitySet Name="Ofertas" EntityType="Self.Oferta" />
           <AssociationSet Name="fk_id_categoria_ofertas" Association="Self.fk_id_categoria_ofertas">
@@ -99,9 +99,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="p3p1BolsaTrabajoModelCategoriaOfertaStoreContainer" CdmEntityContainer="p3p1BolsaTrabajoEntitiesCategoriaOferta">
+        <EntityContainerMapping StorageEntityContainer="p3p1BolsaTrabajoModelStoreContainer" CdmEntityContainer="p3p1BolsaTrabajoEntitiesCategoriaOfertas">
           <EntitySetMapping Name="categoriaOfertaEmpleos">
-            <EntityTypeMapping TypeName="p3p1BolsaTrabajoModelCategoriaOferta.categoriaOfertaEmpleo">
+            <EntityTypeMapping TypeName="p3p1BolsaTrabajoModel.categoriaOfertaEmpleo">
               <MappingFragment StoreEntitySet="categoriaOfertaEmpleos">
                 <ScalarProperty Name="id_categoria_ofertas" ColumnName="id_categoria_ofertas" />
                 <ScalarProperty Name="titulo" ColumnName="titulo" />
@@ -109,7 +109,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Ofertas">
-            <EntityTypeMapping TypeName="p3p1BolsaTrabajoModelCategoriaOferta.Oferta">
+            <EntityTypeMapping TypeName="p3p1BolsaTrabajoModel.Oferta">
               <MappingFragment StoreEntitySet="Ofertas">
                 <ScalarProperty Name="id_ofertas" ColumnName="id_ofertas" />
                 <ScalarProperty Name="titulo" ColumnName="titulo" />

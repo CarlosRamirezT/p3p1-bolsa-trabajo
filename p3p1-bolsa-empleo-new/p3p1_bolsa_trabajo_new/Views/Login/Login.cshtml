@@ -44,9 +44,13 @@
                             <td>@Html.ValidationMessageFor(model => model.password_usuario, "", new { @class = "text-danger" })</td>
                         </tr>
                         <tr>
-                            <td colspan="2">
+                            <td></td>
+                            <td>
+                                @Html.ActionLink("Aun no tienes una cuenta?, Registrate", "Signup")
                                 <input type="submit" name="name" class="btn btn-success" value="Logear" />
-                                <label class="label-success">@ViewBag.DuplicateMessage</label>
+                                <label class="label-danger">@ViewBag.DuplicateMessage</label>
+                                <label class="label-success">@ViewBag.SuccessMessage</label>
+                                <label class="label-danger">@ViewBag.ErrorMessage</label>
                             </td>
                         </tr>
 

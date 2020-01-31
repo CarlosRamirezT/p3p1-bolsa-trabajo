@@ -38,6 +38,7 @@ namespace p3p1_bolsa_trabajo_new.Controllers
             Usuario usuarioModel = new Usuario();
             return View(usuarioModel);
         }
+
         [HttpPost]
         public ActionResult Signup(Usuario usuarioModel)
         {
@@ -45,15 +46,21 @@ namespace p3p1_bolsa_trabajo_new.Controllers
             {
                 if (dbmodel.Usuarios.Any(x => x.email == usuarioModel.email))
                 {
-                    ViewBag.DuplicateMessage = "El email ingresado esta en uso";
+                    ViewBag.ErrorMessage = "El email ingresado esta en uso";
                     return View("Signup", usuarioModel);
                 }
                 dbmodel.Usuarios.Add(usuarioModel);
                 dbmodel.SaveChanges();
             }
             ModelState.Clear();
-            ViewBag.SuccesMessage = "Registro Exitoso";
+            ViewBag.SuccesMessage = "El usuario ha sigo registrado";
             return View("Login", new Usuario());
+        }
+
+        public ActionResult Logout()
+        {
+            Session["id_usuarios"] = null;
+            return RedirectToAction("Index", "Ofertas");
         }
 
     }

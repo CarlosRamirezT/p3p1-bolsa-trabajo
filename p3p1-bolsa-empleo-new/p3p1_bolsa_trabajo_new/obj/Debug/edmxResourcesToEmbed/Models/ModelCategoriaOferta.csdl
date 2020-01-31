@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="p3p1BolsaTrabajoModelCategoriaOferta" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="p3p1BolsaTrabajoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="categoriaOfertaEmpleo">
     <Key>
       <PropertyRef Name="id_categoria_ofertas" />
@@ -35,7 +35,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="p3p1BolsaTrabajoEntitiesCategoriaOferta" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="p3p1BolsaTrabajoEntitiesCategoriaOfertas" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="categoriaOfertaEmpleos" EntityType="Self.categoriaOfertaEmpleo" />
     <EntitySet Name="Ofertas" EntityType="Self.Oferta" />
     <AssociationSet Name="fk_id_categoria_ofertas" Association="Self.fk_id_categoria_ofertas">

@@ -13,10 +13,10 @@ namespace p3p1_bolsa_trabajo_new.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class p3p1BolsaTrabajoEntitiesCategoriaOferta : DbContext
+    public partial class p3p1BolsaTrabajoEntitiesCategoriaOfertas : DbContext
     {
-        public p3p1BolsaTrabajoEntitiesCategoriaOferta()
-            : base("name=p3p1BolsaTrabajoEntitiesCategoriaOferta")
+        public p3p1BolsaTrabajoEntitiesCategoriaOfertas()
+            : base("name=p3p1BolsaTrabajoEntitiesCategoriaOfertas")
         {
         }
     

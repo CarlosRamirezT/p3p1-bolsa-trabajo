@@ -11,13 +11,30 @@ namespace p3p1_bolsa_trabajo_new.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Usuario
     {
         public int id_usuarios { get; set; }
+
+        [DisplayName("Email")]
+        [Required(ErrorMessage = "Debe Proporcionar Email")]
+        [DataType(DataType.EmailAddress)]
         public string email { get; set; }
+
+        [DisplayName("Password")]
+        [Required(ErrorMessage = "Debe proporcionar Password")]
+        [DataType(DataType.Password)]
         public string password_usuario { get; set; }
+
+        [DisplayName("Password")]
+        [Required(ErrorMessage = "Confirme el password")]
+        [DataType(DataType.Password)]
         public string confirm_password { get; set; }
+
+        [DisplayName("Tipo de Cuenta")]
+        [Required(ErrorMessage = "Introduzca admin")]
         public string rol { get; set; }
     }
 }
