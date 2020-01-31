@@ -48,6 +48,21 @@ namespace p3p1_bolsa_trabajo.Controllers
             return View("IndexAdmin", ofertas_categorias);
         }
 
+        // GET: Ofertas/Details/5
+        public ActionResult DetailsAdmin(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Oferta oferta = db.Ofertas.Find(id);
+            if (oferta == null)
+            {
+                return HttpNotFound();
+            }
+            return View("DetailsAdmin", oferta);
+        }
+
         // GET: Ofertas/Create
         public ActionResult Create()
         {
