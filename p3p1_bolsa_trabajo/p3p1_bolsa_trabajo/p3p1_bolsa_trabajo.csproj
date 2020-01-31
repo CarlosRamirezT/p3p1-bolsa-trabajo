@@ -153,7 +153,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\AddOfertassController.cs" />
     <Compile Include="Models\categoriaOfertaEmpleo.cs">
       <DependentUpon>Model_Ofertas_Categoria.tt</DependentUpon>
     </Compile>
@@ -206,7 +205,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_Layout_Administrador.cshtml" />
     <Content Include="Views\User_\AddOrEdit.cshtml" />
-    <Content Include="Views\AddOfertass\Aofertas.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

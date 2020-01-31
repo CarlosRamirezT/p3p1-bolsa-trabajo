@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿// T4 code generation is enabled for model 'C:\Users\Roberlynk\source\repos\p3p1-bolsa-trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\Models\dbModelUsers.edmx'. 
+=======
+﻿// T4 code generation is enabled for model 'C:\Users\ii\Documents\Academic Itla Proyect\Cuatrimestre 2020-C-1\Programacion III\1. Proyecto 1 - Bolsa Trabajo\p3p1_bolsa_trabajo\p3p1_bolsa_trabajo\Models\dbModelUsers.edmx'. 
+>>>>>>> 958227aca6e4904c7e0bdfa2e6dcb75a998be20c
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
