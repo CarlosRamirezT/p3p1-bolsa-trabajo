@@ -39,6 +39,6 @@
             contador++;
         }
     </table>
-    <a class="alert alert-success" href="">Ver más...</a>
+    @Html.ActionLink("Ver todos", "ViewAllUser", new { category_id = categoria.id_categoria_ofertas })
     contador = 0;
 }
