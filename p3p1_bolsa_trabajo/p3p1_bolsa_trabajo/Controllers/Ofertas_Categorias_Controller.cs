@@ -37,6 +37,17 @@ namespace p3p1_bolsa_trabajo.Controllers
             return View(oferta);
         }
 
+        // GET: Ofertas
+        public ActionResult IndexAdmin()
+        {
+            IOrderedQueryable<Oferta> ofertas = from o in db.Ofertas orderby o.fecha_posteo descending select o;
+            IOrderedQueryable<categoriaOfertaEmpleo> categorias = from c in db.categoriaOfertaEmpleos orderby c.id_categoria_ofertas select c;
+            dynamic ofertas_categorias = new ExpandoObject();
+            ofertas_categorias.Ofertas = ofertas;
+            ofertas_categorias.Categorias = categorias;
+            return View("IndexAdmin", ofertas_categorias);
+        }
+
         // GET: Ofertas/Create
         public ActionResult Create()
         {

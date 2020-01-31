@@ -29,7 +29,7 @@ namespace p3p1_bolsa_trabajo.Controllers
                 else
                 {
                     Session["id_usuarios"] = userDetails.id_usuarios;
-                    return RedirectToAction("Index", "Ofertas_Categorias_");
+                    return RedirectToAction("IndexAdmin", "Ofertas_Categorias_");
                 }
             }
         }
