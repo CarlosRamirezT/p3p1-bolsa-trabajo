@@ -19,7 +19,7 @@ insert into Ofertas values(
 'Description Programador Senior',
 GETDATE(),
 1,
-1,
+16,
 'Santo Domingo',
 'Senior Developer',
 'Cadara Software'
@@ -92,3 +92,143 @@ GETDATE(),
 )
 
 select * from ofertas where activo = 1 order by id_categoria_ofertas
+
+
+/*test for presentation*/
+delete from categoriaOfertaEmpleos
+select * from categoriaOfertaEmpleos
+insert into categoriaOfertaEmpleos values(
+'Software'
+)
+insert into categoriaOfertaEmpleos values(
+'Limpieza'
+)
+insert into categoriaOfertaEmpleos values(
+'Educación'
+)
+insert into categoriaOfertaEmpleos values(
+'Administración'
+)
+
+truncate table Ofertas
+select * from Ofertas
+insert into Ofertas values(
+'Se busca Programador',
+'Description Programador Senior',
+GETDATE(),
+1,
+16,
+'Santo Domingo',
+'Senior Developer',
+'Cadara Software'
+)
+insert into Ofertas values(
+'Se busca Analista de Software',
+'Ingenieria o carreras afines',
+GETDATE(),
+1,
+16,
+'La Vega',
+'Software Analist',
+'Cadara Software'
+)
+insert into Ofertas values(
+'Se busca programador frontend',
+'Manejo C# y tecnologias afines',
+GETDATE(),
+1,
+16,
+'Santo Domingo',
+'Senior Backend Developer',
+'Cadara Software'
+)
+insert into Ofertas values(
+'Se busca programador backend',
+'Manejo C# y tecnologias afines',
+GETDATE(),
+1,
+16,
+'Santo Domingo',
+'Senior Backend Developer',
+'Cadara Software'
+)
+insert into Ofertas values(
+'Se busca ingeniero devop',
+'Manejo docker y tecnologias afines',
+GETDATE(),
+1,
+16,
+'Santo Domingo',
+'Senior DevOp Engineer',
+'Cadara Software'
+)
+insert into Ofertas values(
+'Se busca administrador de base de datos',
+'Manejo de sql server y afines',
+GETDATE(),
+1,
+16,
+'Santo Domingo',
+'Senior Database Administrator',
+'Cadara Software'
+)
+insert into Ofertas values(
+'Se busca trabajadora domestica',
+'Mujer mayor de 20 años',
+GETDATE(),
+1,
+17,
+'Santiago',
+'Encargada de limpieza',
+'Regus'
+)
+insert into Ofertas values(
+'Se busca trabajadora domestica',
+'Mujer mayor de 25 años',
+GETDATE(),
+1,
+17,
+'Santiago',
+'Encargada de limpieza',
+'Roble Corporate Center'
+)
+insert into Ofertas values(
+'Se busca profesora',
+'Licencida en educacion',
+GETDATE(),
+1,
+18,
+'Santiago',
+'Profesora de Ciencias Naturales',
+'Colegio Nuevo Renacer'
+)
+insert into Ofertas values(
+'Se busca Psicoloda',
+'Licenciada en Psicologia Clinica o Afines',
+GETDATE(),
+1,
+18,
+'Moca',
+'Orientadora',
+'Colegio Nuevo Renacer'
+)
+insert into Ofertas values(
+'Se busca contador',
+'Licenciado en Contabilidad o Carreras Afines',
+GETDATE(),
+1,
+19,
+'La Vega',
+'Contable',
+'Rubier Corporate Center'
+)
+insert into Ofertas values(
+'Se busca administrador',
+'Licenciado en Administracion o Carreras Afines',
+GETDATE(),
+1,
+19,
+'La Vega',
+'Administrador de Almacer',
+'Rubier Corporate Center'
+)
