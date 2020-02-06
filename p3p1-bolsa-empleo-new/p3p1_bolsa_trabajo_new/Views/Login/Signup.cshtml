@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Login</title>
+    <title>Crear Cuenta</title>
     <link href="~/Content/login-style.css" rel="stylesheet" />
 </head>
 <body>
@@ -17,15 +17,16 @@
                     <h1 class="text-center login-title">Crear Cuenta</h1>
                     <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
                          alt="">
-                    <form class="form-signin" action="Login" method="post">
+                    <form class="form-signin" action="Signup" method="post">
                         <input type="email" name="email" class="form-control" placeholder="Correo Electronico" required autofocus>
                         <input type="password" name="password_usuario" class="form-control" placeholder="Contraseña" required>
                         <input type="password" name="confirm_password" class="form-control" placeholder="Confirmar Contraseña" required>
+                        <input type="text" name="rol" class="form-control" placeholder="Rol" required>
                         <button class="btn btn-lg btn-primary btn-block" type="submit">
                             Crear Cuenta
                         </button>
                         <a href="#" class="pull-right need-help">Necesitas Ayuda? </a><span class="clearfix"></span>
-                        <br/>
+                        <br />
                         @Html.ActionLink("Ya tienes una cuenta?, Logueate", "Login")
                     </form>
                     <div class="my-alert-message">
@@ -43,4 +44,3 @@
     </div>
 </body>
 </html>
-
