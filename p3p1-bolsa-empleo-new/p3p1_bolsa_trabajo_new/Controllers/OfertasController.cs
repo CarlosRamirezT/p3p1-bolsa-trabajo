@@ -8,12 +8,14 @@ using p3p1_bolsa_trabajo_new.Models;
 using System.Dynamic;
 using PagedList;
 using PagedList.Mvc;
+using System;
 
 namespace p3p1_bolsa_trabajo_new.Controllers
 {
     public class OfertasController : Controller
     {
         private p3p1BolsaTrabajoEntitiesCategoriaOfertas db = new p3p1BolsaTrabajoEntitiesCategoriaOfertas();
+        private p3p1BolsaTrabajoEntitiesConfiguration configDb = new p3p1BolsaTrabajoEntitiesConfiguration();
 
         // GET: Ofertas
         public ActionResult Index()
@@ -23,6 +25,8 @@ namespace p3p1_bolsa_trabajo_new.Controllers
             dynamic ofertas_categorias = new ExpandoObject();
             ofertas_categorias.Ofertas = ofertas;
             ofertas_categorias.Categorias = categorias;
+            var result = (from s in configDb.Configuraciones where s.nombre == "cantidad registros inicio" select s.valor_configuracion).First();
+            ofertas_categorias.rows2show = result;
             return View("Index", ofertas_categorias);
         }
 

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="p3p1BolsaTrabajoModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Configuracione">
+    <Key>
+      <PropertyRef Name="id_configuraciones" />
+    </Key>
+    <Property Name="id_configuraciones" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="valor_configuracion" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="p3p1BolsaTrabajoEntitiesConfiguration" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Configuraciones" EntityType="Self.Configuracione" />
+  </EntityContainer>
+</Schema>

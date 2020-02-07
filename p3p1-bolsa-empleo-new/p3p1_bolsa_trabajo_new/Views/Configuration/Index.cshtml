@@ -1,0 +1,38 @@
+﻿@model IEnumerable<p3p1_bolsa_trabajo_new.Models.Configuracione>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<br />
+<div class="jumbotron text-center">
+    <h2>Configuraciones</h2>
+    <p>Configura tu página!</p>
+</div>
+<br />
+
+
+<table class="table table-bordered table-hover table-responsive">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.nombre)</th>
+        <th>@Html.DisplayNameFor(model => model.valor_configuracion)</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.valor_configuracion)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.id_configuraciones }) 
+            </td>
+        </tr>
+    }
+
+</table>

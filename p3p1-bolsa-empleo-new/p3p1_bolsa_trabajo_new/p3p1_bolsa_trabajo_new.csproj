@@ -127,6 +127,16 @@
       <DependentUpon>ModelCategoriaOferta.edmx</DependentUpon>
       <LastGenOutput>ModelCategoriaOferta.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\ModelConfiguration.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelConfiguration.edmx</DependentUpon>
+      <LastGenOutput>ModelConfiguration.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelConfiguration.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelConfiguration.edmx</DependentUpon>
+      <LastGenOutput>ModelConfiguration.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\ModelUsuario.edmx.diagram">
       <DependentUpon>ModelUsuario.edmx</DependentUpon>
     </Content>
@@ -136,6 +146,13 @@
     </EntityDeploy>
     <Content Include="Models\ModelCategoriaOferta.edmx.diagram">
       <DependentUpon>ModelCategoriaOferta.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\ModelConfiguration.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelConfiguration.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelConfiguration.edmx.diagram">
+      <DependentUpon>ModelConfiguration.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Models\ModelUsuario.Context.tt">
@@ -164,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ConfigurationController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OfertasController.cs" />
     <Compile Include="Global.asax.cs">
@@ -171,6 +189,9 @@
     </Compile>
     <Compile Include="Models\categoriaOfertaEmpleo.cs">
       <DependentUpon>ModelCategoriaOferta.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Configuracione.cs">
+      <DependentUpon>ModelConfiguration.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelCategoriaOferta.Context.cs">
       <AutoGen>True</AutoGen>
@@ -186,6 +207,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelCategoriaOferta.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelConfiguration.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelConfiguration.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelConfiguration.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelConfiguration.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelConfiguration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelConfiguration.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelUsuario.Context.cs">
       <AutoGen>True</AutoGen>
@@ -226,6 +262,8 @@
     <Content Include="Views\Ofertas\ViewAll.cshtml" />
     <Content Include="Views\Login\Signup.cshtml" />
     <Content Include="Views\Ofertas\ViewAllUser.cshtml" />
+    <Content Include="Views\Configuration\Edit.cshtml" />
+    <Content Include="Views\Configuration\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

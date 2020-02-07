@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="p3p1BolsaTrabajoModel1StoreContainer" CdmEntityContainer="p3p1BolsaTrabajoEntitiesConfiguration">
+    <EntitySetMapping Name="Configuraciones">
+      <EntityTypeMapping TypeName="p3p1BolsaTrabajoModel1.Configuracione">
+        <MappingFragment StoreEntitySet="Configuraciones">
+          <ScalarProperty Name="id_configuraciones" ColumnName="id_configuraciones" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="valor_configuracion" ColumnName="valor_configuracion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
