@@ -11,6 +11,7 @@
     <div class="alert alert-success">@Html.ActionLink("Crear Nueva Oferta", "Create")</div>
 </div>
 <br />
+<p>Mostrando @Model.rows2show registros</p>
 @foreach (var categoria in Model.Categorias)
 {
     var contador = 0;
@@ -27,7 +28,7 @@
         </tr>
         @foreach (var oferta in Model.Ofertas)
         {
-            if (oferta.id_categoria_ofertas == categoria.id_categoria_ofertas && contador <= 5)
+            if (oferta.id_categoria_ofertas == categoria.id_categoria_ofertas && contador <= Model.rows2show)
             {
         <tr>
             <td>@oferta.ubicacion</td>

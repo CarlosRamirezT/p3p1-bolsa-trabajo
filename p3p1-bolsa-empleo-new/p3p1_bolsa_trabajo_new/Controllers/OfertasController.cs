@@ -54,6 +54,8 @@ namespace p3p1_bolsa_trabajo_new.Controllers
                 dynamic ofertas_categorias = new ExpandoObject();
                 ofertas_categorias.Ofertas = ofertas;
                 ofertas_categorias.Categorias = categorias;
+                var result = (from s in configDb.Configuraciones where s.nombre == "cantidad registros inicio" select s.valor_configuracion).First();
+                ofertas_categorias.rows2show = result;
                 return View("IndexAdmin", ofertas_categorias);
             }
             else
