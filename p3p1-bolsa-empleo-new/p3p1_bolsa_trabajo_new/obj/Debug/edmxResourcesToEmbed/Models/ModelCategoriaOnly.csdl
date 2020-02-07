@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="p3p1BolsaTrabajoModelCategoriaOnly" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="categoriaOfertaEmpleo">
+    <Key>
+      <PropertyRef Name="id_categoria_ofertas" />
+    </Key>
+    <Property Name="id_categoria_ofertas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="p3p1BolsaTrabajoEntitiesCategoriaOnly" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categoriaOfertaEmpleos" EntityType="Self.categoriaOfertaEmpleo" />
+  </EntityContainer>
+</Schema>

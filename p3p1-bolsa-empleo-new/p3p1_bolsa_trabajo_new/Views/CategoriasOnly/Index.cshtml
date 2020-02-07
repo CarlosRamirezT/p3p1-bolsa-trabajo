@@ -1,0 +1,44 @@
+﻿@model IEnumerable<p3p1_bolsa_trabajo_new.Models.categoriaOfertaEmpleo>
+
+@{
+    ViewBag.Title = "Categorias";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<br />
+<div class="jumbotron text-center">
+    <h2>Categorias</h2>
+    <p>Gestiona las categorias para las ofertas de empleo!</p>
+    <div class="alert alert-success">@Html.ActionLink("Crear Nueva Categoria", "Create")</div>
+</div>
+<br />
+
+<table class="table table-bordered table-hover table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.titulo)
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.titulo)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.id_categoria_ofertas })
+        </td>
+        <td>
+            @Html.ActionLink("Detalles", "Details", new { id = item.id_categoria_ofertas })
+        </td>
+        <td>
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.id_categoria_ofertas })
+        </td>
+    </tr>
+    }
+
+</table>

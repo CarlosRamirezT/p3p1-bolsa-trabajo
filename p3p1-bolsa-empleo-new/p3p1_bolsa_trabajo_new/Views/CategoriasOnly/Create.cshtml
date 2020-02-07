@@ -1,0 +1,36 @@
+﻿@model p3p1_bolsa_trabajo_new.Models.categoriaOfertaEmpleo
+
+@{
+    ViewBag.Title = "Crear Nueva Categoria";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2 class="alert alert-info">Crear Nueva Categoria de Trabajo</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<table class="table table-bordered table-hover table-responsive">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <tr>
+        <th>
+            @Html.LabelFor(model => model.titulo, htmlAttributes: new { @class = "control-label col-md-2" })
+        </th>
+        <td class="col-md-10">
+            @Html.EditorFor(model => model.titulo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.titulo, "", new { @class = "text-danger" })
+        </td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Cancelar", "Index") | 
+            <input type="submit" value="Create" class="btn btn-success" />
+        </td>
+    </tr>
+
+</table>
+ 
+}

@@ -1,0 +1,27 @@
+﻿@model p3p1_bolsa_trabajo_new.Models.categoriaOfertaEmpleo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>categoriaOfertaEmpleo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titulo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_categoria_ofertas }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

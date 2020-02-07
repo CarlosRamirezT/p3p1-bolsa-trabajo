@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoriasOnlyController.cs" />
     <Compile Include="Controllers\ConfigurationController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OfertasController.cs" />
@@ -264,6 +265,11 @@
     <Content Include="Views\Ofertas\ViewAllUser.cshtml" />
     <Content Include="Views\Configuration\Edit.cshtml" />
     <Content Include="Views\Configuration\Index.cshtml" />
+    <Content Include="Views\CategoriasOnly\Create.cshtml" />
+    <Content Include="Views\CategoriasOnly\Delete.cshtml" />
+    <Content Include="Views\CategoriasOnly\Details.cshtml" />
+    <Content Include="Views\CategoriasOnly\Edit.cshtml" />
+    <Content Include="Views\CategoriasOnly\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

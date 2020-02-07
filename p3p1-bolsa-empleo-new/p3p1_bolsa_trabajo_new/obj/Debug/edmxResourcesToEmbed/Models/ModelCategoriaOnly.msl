@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="p3p1BolsaTrabajoModelCategoriaOnlyStoreContainer" CdmEntityContainer="p3p1BolsaTrabajoEntitiesCategoriaOnly">
+    <EntitySetMapping Name="categoriaOfertaEmpleos">
+      <EntityTypeMapping TypeName="p3p1BolsaTrabajoModelCategoriaOnly.categoriaOfertaEmpleo">
+        <MappingFragment StoreEntitySet="categoriaOfertaEmpleos">
+          <ScalarProperty Name="id_categoria_ofertas" ColumnName="id_categoria_ofertas" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
